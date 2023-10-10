@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="knygos.list">
+      <field name="name">knygos list</field>
+      <field name="model">knygos.knygos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="knygos.action_window">
+      <field name="name">knygos window</field>
+      <field name="res_model">knygos.knygos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="knygos.action_server">
+      <field name="name">knygos server</field>
+      <field name="model_id" ref="model_knygos_knygos"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="knygos" id="knygos.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="knygos.menu_1" parent="knygos.menu_root"/>
+    <menuitem name="Menu 2" id="knygos.menu_2" parent="knygos.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="knygos.menu_1_list" parent="knygos.menu_1"
+              action="knygos.action_window"/>
+    <menuitem name="Server to list" id="knygos" parent="knygos.menu_2"
+              action="knygos.action_server"/>
+    -->
+  </data>
+</odoo>

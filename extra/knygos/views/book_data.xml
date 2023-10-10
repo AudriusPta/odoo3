@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="action_books_tree" model="ir.actions.act_window">
+            <field name="name">Books</field>
+            <field name="res_model">books</field>
+            <field name="view_mode">tree,form</field>
+            <field name="arch" type="xml"></field>
+        </record>
+
+        <menuitem id="books_root_menu"
+                  name="knygos"
+                  sequence="1"/>
+        <menuitem id="book_data_menu"
+                  name="Books"
+                  parent="books_root_menu"
+                  action="action_books"
+                  sequence="2"/>
+
+
+</odoo>

@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <report
+            id="report_books"
+            string="Books Report"
+            model="books.wizard"
+            report_type="qweb-pdf"
+            name="books_report_template"
+        />
+        <template id="books_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h1>Books Report</h1>
+                            <p>Date from: <span t-esc="o.data_from"/></p>
+                            <p>Date to: <span t-esc="o.data_to"/></p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
